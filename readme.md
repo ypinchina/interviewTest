@@ -190,3 +190,5 @@ SSR
 * flex盒模型  
 * Column布局  
 
+
+对象的属性名可以是undefine null boolean类型的值， 但是 属性名 是数字和字符串如果相同，则认为是相同的属性名，因为编译运行的时候会对属性名使用toString方法
