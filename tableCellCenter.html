@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中方案</title>
+<style>
+    html{
+        height: 100%;
+        background-color: coral;
+    }
+    body {
+        overflow: hidden;
+        height: 100%;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        width: 500px;
+        height: 500px;
+        background-color: chartreuse;
+    }
+    #box{
+        background-color: bisque;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+    <div id='box'>使用table-cell 父级元素display<br>table-cell 且要有父级元素确定宽高px</div>
+</body>
+</html>

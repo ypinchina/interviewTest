@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中方案</title>
+<style>
+    html{
+        height: 100%;
+    }
+    body {
+        overflow: hidden;
+        height: 100%;
+    }
+    #box{
+        background-color: bisque;
+    }
+</style>
+</head>
+<body>
+    <div id='box'>使用flex 不需要宽高 内容撑开 兼容一般</div>
+    <script>
+        let HTML = document.documentElement
+        let winW = HTML.clientWidth
+        let winH = HTML.clientHeight
+        box.style.position = 'absolute'//此段代码顺序不能改变
+        let bh = box.offsetHeight
+        let bw = box.offsetWidth
+        box.style.top = (winH - bh)*0.5 + 'px'
+        box.style.left = (winW - bw)*0.5 + 'px'
+    </script>
+</body>
+</html>

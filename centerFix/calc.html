@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc方案</title>
+<style>
+    html{
+        height: 100%;
+        margin:0;
+        padding: 0;
+    }
+    body {
+        overflow: hidden;
+        height: 100%;
+    }
+    #center{
+        display: inline-block;
+        width: calc(100% - 400px);
+        min-height: 200px;
+        background-color: blueviolet;
+    }
+    #left{
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        background-color: burlywood;
+    }
+    #right{
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        background-color: burlywood;
+    }
+    #center,#left,#right{
+        float: left;
+    }
+</style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div id="left"></div>
+        <div id='center'></div>
+        <div id='right'></div>
+    </div>
+</body>
+</html>

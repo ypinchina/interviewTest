@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    name: <span id='spanName'></span><br>
+    <input type='text' id='inputName'>
+
+
+    <script>
+        let obj =  {
+        }
+        obj = new Proxy(obj, {
+            get(target, prop) {
+                return target.prop
+            },
+            set(target, prop, value) {
+                target.prop = value 
+                observe()
+            }
+        })
+        function observe() {
+            spanName.innerHTML = obj.name
+            inputName.value = obj.name 
+        }
+        setTimeout(() => {
+            obj.name = 'vue 2.0 双向数据绑定'
+        }, 1000)
+        inputName.oninput = function() {
+            obj.name = this.value
+        }
+        /*
+        es6  proxy实现双向数据绑定 vue 3.0
+        好处  不需要事先给空方法定义一个需要监听的属性
+              可以直接监听对象下的所有属性，且不需要克隆
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中方案</title>
+<style>
+    html{
+        height: 100%;
+    }
+    body {
+        overflow: hidden;
+        height: 100%;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #box{
+        background-color: bisque;
+    }
+</style>
+</head>
+<body>
+    <div id='box'>使用flex 不需要宽高 内容撑开 兼容一般</div>
+</body>
+</html>
