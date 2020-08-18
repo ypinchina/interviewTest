@@ -7,7 +7,9 @@ let obj = {
         d: 123123,
         e:"qweqweqe"
     },
-    d:/\.js?$/
+    d:/\.js?$/,
+    f:new Date(),
+    h:[1,321,'a',{p:2}]
 }
 
 //let obj1 = JSON.parse(JSON.stringify(obj))
@@ -34,7 +36,7 @@ function deepclone (object){
     if (object instanceof Date) {
         return new Date(object)
     }
-    for (var key of object) {
+    for (var key in object) {
         if (object.hasOwnProperty(key)) {
             obj1[key] = deepclone(object[key])
         }
