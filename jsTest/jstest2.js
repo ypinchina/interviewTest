@@ -1,16 +1,16 @@
 //闭包
 
-let text = (function(i) {
-    return function() {
-      i = i*2
-      alert(i)
+let text = (function (i) {
+    return function () {
+        i = i * 2
+        alert(i)
     }
 })(2)
 text(5)
 
 let a = 0, b = 0;
 function A(a) {
-    A = function(b) {
+    A = function (b) {
         alert(a + b++)
     }
     alert(a++)

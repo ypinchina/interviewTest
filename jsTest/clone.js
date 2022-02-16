@@ -12,11 +12,11 @@ let obj = {
     h:[1,321,'a',{p:2}]
 }
 
-//let obj1 = JSON.parse(JSON.stringify(obj))
+let obj1 = JSON.parse(JSON.stringify(obj))
 /*深克隆 但是对于对象中含有正则对象 日期对象 function都会转化成字符串或者空对象*/
 
 //let obj1 = {...obj}
-//浅克隆  使用的是ES6结构表达式
+//浅克隆  使用的是ES6解构表达式
 
 // 深克隆 只克隆第一层 需要递归
 // let obj1 = {}
